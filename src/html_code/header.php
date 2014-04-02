@@ -1,5 +1,5 @@
 <header class="mainHeader">
-<img src="http://www.nisha.se/CarApp/images/Header.png" />
+<img src="http://www.nisha.se/carapp/images/Header.png" />
 <p>
 
 </p>
