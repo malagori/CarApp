@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Car Registration Form</title>
+
+<style type="text/css" media="all"> @import "../css_code/style.css"; </style> 
+</head>
+
+<body>
+<div id="wrapper">
+<h1 class="h1"> ARBETSORDER </h1>
+<hr />
+
+<!--
+Fordonsuppgifter Portion Started
+-->
+
+<form id="form1" name="form1" method="post" action="">
+
+<div id="form1_Fordonsuppgifter">
+
+<h2>Fordonsuppgifter</h2>
+
+<p>
+  <label for="form1_Reg_nr">Reg Nr</label>
+  <input type="text" name="form1_Reg_nr" id="form1_Reg_nr" size="30"/>
+</p>
+<p>
+  <label for="form1_Bilmärke">Bilmärke</label>
+  <input type="text" name="form1_Bilmärke" id="form1_Bilmärke" size="30" />
+</p>
+  <label for="form1_Model">Model</label>
+  <input type="text" name="form1_Model" id="form1_Model" size="30" />
+<p>
+  <label for="form1_Årsmodel">Årsmodel</label>
+  <input type="text" name="form1_Årsmodel" id="form1_Årsmodel" size="30" />
+</p>
+<p>
+  <label for="form1_m-km">Miltal - km</label>
+  <input type="text" name="form1_m-km" id="form1_m-km" size="30"/>
+</p>
+<label for="form1_Antaldörrar">
+Antaldörrar
+</label>
+<div id="form1_Antaldörrar">
+  <label>
+    <input type="radio" name="Antald&ouml;rrar" value="3D" id="Antaldoumlrrar_0" />
+    3 D</label>
+  <label>
+    <input type="radio" name="Antald&ouml;rrar" value="4D" id="Antaldoumlrrar_1" />
+    4 D</label>
+  <label>
+    <input type="radio" name="Antald&ouml;rrar" value="5D" id="Antaldoumlrrar_2" />
+    5 D</label>
+
+  <label>
+    <input type="radio" name="Antald&ouml;rrar" value="Skåp" id="Antaldoumlrrar_3" />
+    Skåp</label>
+    </div>
+</p>
+</div>
+
+<!--
+Fordonsuppgifter Portion Ended
+-->
+
+<hr />
+
+<!--
+Kund Portion Started
+-->
+<div id="form1_Kund">
+
+<h2>Kund</h2>
+<p>
+  <label for="form1_Namnn">Namnn</label>
+  <input type="text" name="form1_Namnn" id="form1_Namnn" size="30"/>
+</p>
+<p>
+  <label for="form1_Telefone">Telefone</label>
+  <input type="text" name="form1_Telefone" id="form1_Telefone" size="30"/>
+</p>
+  <label for="form1_Adress">Adress</label>
+  <input type="text" name="form1_Adress" id="form1_Adress" size="30"/>
+<p>
+  <label for="form1_E-post">E-Post</label>
+  <input type="text" name="form1_E-post" id="form1_E-post" size="30"/>
+</p>
+</div>
+<!--
+Kund Portion Ended
+-->
+
+<!--
+Skadeuppgifte Portion Started
+-->
+
+<div id="form1_Skadeuppgifte">
+
+<h2>Skadeuppgifte</h2>
+<p>
+  <label for="F.Bolag">F. Bolag</label>
+  <select name="F.Bolag" id="F.Bolag">
+  <option>Aktsam</option>
+  <option>Crawford</option>
+  <option>Crawford</option>
+  <option>Trygg Hansa</option>
+  <option>WLI</option>
+  </select>
+</p>
+<p>
+  <label for="form1_Skade_Nr">Skade Nr</label>
+  <input type="text" name="form1_Skade_Nr" id="form1_Skade_Nr" size="30"/>
+</p>
+<p>
+  <label for="form1_Skade_dag">Skade dag</label>
+  <input type="text" name="form1_Skade_dag" id="form1_Skade_dag" size="30"/>
+</p>
+  <label for="form1_Självrisk">Självrisk</label>
+  <input type="text" name="form1_Självrisk" id="form1_Självrisk" size="30"/>
+<p>
+  <label for="form1_Skadetyp">Skadetyp</label>
+  <input type="text" name="form1_Skadetyp" id="form1_Skadetyp" size="30"/>
+</p>
+</div>
+
+<!--
+Skadeuppgifte Portion Ended
+-->
+
+<!--
+Antal skador Portion Started
+-->
+
+<div id="form1_Antal_skador">
+
+   <p>
+   <input type="checkbox" name="form1_Antal_skadorBox" id="form1_Antal_skadorBox" />
+   <label for="form1_Antal_skadorBox">Antal skador</label>
+   </p>
+   <p>
+   <input type="checkbox" name="form1_Vållande" id="form1_Vållande" />
+   <label for="form1_Vållande">Vållande</label>
+   </p>
+   <p>
+   <input type="checkbox" name="form1_Självrisk" id="form1_Självriskx" />
+   <label for="form1_Självrisk">Självrisk</label>
+   </p>
+   <p>
+   <input type="checkbox" name="form1_Momspliktig" id="form1_Momspliktig" />
+   <label for="form1_Självrisk">Momspliktig</label>
+   </p>
+
+<p>
+  <label for="form1_BOKAD_TID">Bokad tid</label>
+  <input type="text" name="form1_BOKAD_TID" id="form1_BOKAD_TID" size="30"/>
+</p>
+<p>
+  <label for="form1_Beräknad_Klart">Beräknad Klart</label>
+  <input type="text" name="form1_Beräknad_Klart" id="form1_Beräknad_Klart" size="30"/>
+</p>
+  
+<p>
+  <label for="form1_Klar_Datum">Klar Datum</label>
+  <input type="text" name="form1_Klar_Datum" id="form1_Klar_Datum" size="30"/>
+</p>
+</div>
+<!--
+Antal skador Portion Ended
+-->
+<hr />
+
+</form>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,328 @@
+@charset "utf-8";
+/* CSS Document */
+
+<style type="text/css">
+#wrapper 
+{
+    background-color: #ffffff;
+    font-family: cutive, sans-serif;
+    padding-top: 25px;
+    letter-spacing: .05em;
+    background-size: 100%;
+}
+.Heading {
+	text-align: center;
+}
+
+.h1 {
+	text-align: center;
+}
+
+/* Fordonsuppgifter Portion Started */
+
+#form1_Fordonsuppgifter 
+{
+	sbackground-color: #DDE47F;
+    height: auto;
+    left: 260px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding-bottom: 0;
+    position: relative;
+    width: 320px;
+    z-index: 1;
+	
+}
+
+
+#form1_Reg_nr {
+    border-color: #BDC7D8;
+    border-radius: 2px;
+    border-width: 0;
+    box-shadow: -1px 1px 5px 0 #888888 inset;
+    font-size: 14px;
+    height: 35px;
+    margin-left: 12px;
+    margin-top: -2px;
+    padding-left: 5px;
+    width: 267px;
+    
+}
+#form1_Bilmärke {
+
+    border-color: #BDC7D8;
+    border-radius: 2px;
+    border-width: 0;
+    box-shadow: -1px 1px 5px 0 #888888 inset;
+    font-size: 14px;
+    height: 35px;
+    margin-left: 12px;
+    margin-top: -2px;
+    padding-left: 5px;
+    width: 267px;
+}
+#form1_Model {
+    border-color: #BDC7D8;
+    border-radius: 2px;
+    border-width: 0;
+    box-shadow: -1px 1px 5px 0 #888888 inset;
+    font-size: 14px;
+    height: 35px;
+    margin-left: 12px;
+    margin-top: -2px;
+    padding-left: 5px;
+    width: 267px;
+}
+#form1_Årsmodel {
+    border-color: #BDC7D8;
+    border-radius: 2px;
+    border-width: 0;
+    box-shadow: -1px 1px 5px 0 #888888 inset;
+    font-size: 14px;
+    height: 35px;
+    margin-left: 12px;
+    margin-top: -2px;
+    padding-left: 5px;
+    width: 267px;
+}
+#form1_m-km {
+    border-color: #BDC7D8;
+    border-radius: 2px;
+    border-width: 0;
+    box-shadow: -1px 1px 5px 0 #888888 inset;
+    font-size: 14px;
+    height: 35px;
+    margin-left: 12px;
+    margin-top: -2px;
+    padding-left: 5px;
+    width: 267px;
+}
+#form1_Antaldörrar
+{
+	border-color: #BDC7D8;
+    border-radius: 2px;s
+    font-size: 14px;
+    height: 35px;
+    margin-left: 12px;
+    margin-top: -2px;
+    padding-left: 5px;
+    width: 267px;
+
+}
+
+/* Fordonsuppgifter Portion End */
+
+/* Kund Portion started */
+
+	#form1_Kund
+{
+	background-color: #CCC;
+	height: auto;
+	left: 575px;
+	margin-bottom: 5px;
+	margin-top: 50px;
+	padding: 15px;
+	position: relative;
+	width: 320px;
+	z-index: 1;
+}
+#form1_Namnn {
+
+    border-color: #BDC7D8;
+    border-radius: 2px;
+    border-width: 0;
+    box-shadow: -1px 1px 5px 0 #888888 inset;
+    font-size: 14px;
+    height: 35px;
+    margin-left: 12px;
+    margin-top: -2px;
+    padding-left: 5px;
+    width: 267px;
+}
+#form1_Telefone {
+
+    border-color: #BDC7D8;
+    border-radius: 2px;
+    border-width: 0;
+    box-shadow: -1px 1px 5px 0 #888888 inset;
+    font-size: 14px;
+    height: 35px;
+    margin-left: 12px;
+    margin-top: -2px;
+    padding-left: 5px;
+    width: 267px;
+}
+#form1_Adress {
+
+    border-color: #BDC7D8;
+    border-radius: 2px;
+    border-width: 0;
+    box-shadow: -1px 1px 5px 0 #888888 inset;
+    font-size: 14px;
+    height: 35px;
+    margin-left: 12px;
+    margin-top: -2px;
+    padding-left: 5px;
+    width: 267px;
+}
+#form1_Epost {
+
+    border-color: #BDC7D8;
+    border-radius: 2px;
+    border-width: 0;
+    box-shadow: -1px 1px 5px 0 #888888 inset;
+    font-size: 14px;
+    height: 35px;
+    margin-left: 12px;
+    margin-top: -2px;
+    padding-left: 5px;
+    width: 267px;
+}
+/* Kund Portion End */
+
+/* Skadeuppgifte Portion Started */
+
+#form1_Skadeuppgifte
+{
+    sbackground-color: #DDE47F;
+    height: auto;
+    left: 260px;
+    margin-bottom: 5px;
+    margin-top: 180px;
+    padding-bottom: 0;
+    position: relative;
+    width: 320px;
+    z-index: 1;
+}
+#F.Bolag 
+{
+
+    border-color: #BDC7D8;
+    border-radius: 2px;
+    border-width: 0;
+    box-shadow: -1px 1px 5px 0 #888888 inset;
+    font-size: 14px;
+    height: 35px;
+    margin-left: 12px;
+    margin-top: -2px;
+    padding-left: 5px;
+    width: 267px;
+}
+#form1_Skade_Nr
+{
+
+    border-color: #BDC7D8;
+    border-radius: 2px;
+    border-width: 0;
+    box-shadow: -1px 1px 5px 0 #888888 inset;
+    font-size: 14px;
+    height: 35px;
+    margin-left: 12px;
+    margin-top: -2px;
+    padding-left: 5px;
+    width: 267px;
+}
+#form1_Skade_dag 
+{
+
+    border-color: #BDC7D8;
+    border-radius: 2px;
+    border-width: 0;
+    box-shadow: -1px 1px 5px 0 #888888 inset;
+    font-size: 14px;
+    height: 35px;
+    margin-left: 12px;
+    margin-top: -2px;
+    padding-left: 5px;
+    width: 267px;
+}
+#form1_Självrisk 
+{
+
+    border-color: #BDC7D8;
+    border-radius: 2px;
+    border-width: 0;
+    box-shadow: -1px 1px 5px 0 #888888 inset;
+    font-size: 14px;
+    height: 35px;
+    margin-left: 12px;
+    margin-top: -2px;
+    padding-left: 5px;
+    width: 267px;
+}
+
+#form1_Skadetyp
+ {
+
+    border-color: #BDC7D8;
+    border-radius: 2px;
+    border-width: 0;
+    box-shadow: -1px 1px 5px 0 #888888 inset;
+    font-size: 14px;
+    height: 35px;
+    margin-left: 12px;
+    margin-top: -2px;
+    padding-left: 5px;
+    width: 267px;
+}
+
+/* Skadeuppgifte Portion End */
+
+/* Antal skador Portion Started */
+
+#form1_Antal_skador
+{
+    sbackground-color: #DDE47F;
+    height: auto;
+    left: 700px;
+    margin-bottom: 5px;
+    margin-top: -358px;
+    padding-bottom: 0;
+    position: relative;
+    width: 320px;
+    z-index: 1;
+}
+#form1_BOKAD_TID
+{
+border-color: #BDC7D8;
+    border-radius: 2px;
+    border-width: 0;
+    box-shadow: -1px 1px 5px 0 #888888 inset;
+    font-size: 14px;
+    height: 35px;
+    margin-left: 12px;
+    margin-top: -2px;
+    padding-left: 5px;
+    width: 267px;	
+}
+
+#form1_Beräknad_Klart
+{
+border-color: #BDC7D8;
+    border-radius: 2px;
+    border-width: 0;
+    box-shadow: -1px 1px 5px 0 #888888 inset;
+    font-size: 14px;
+    height: 35px;
+    margin-left: 12px;
+    margin-top: -2px;
+    padding-left: 5px;
+    width: 267px;	
+}
+
+#form1_Klar_Datum
+{
+border-color: #BDC7D8;
+    border-radius: 2px;
+    border-width: 0;
+    box-shadow: -1px 1px 5px 0 #888888 inset;
+    font-size: 14px;
+    height: 35px;
+    margin-left: 12px;
+    margin-top: -2px;
+    padding-left: 5px;
+    width: 267px;	
+}
+/* Antal skador Portion End */
+
+</style>
