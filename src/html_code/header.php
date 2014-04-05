@@ -6,9 +6,8 @@
 
 <nav>
 <ul>
-<li class="active"><a href="http://www.nisha.se/CarApp/">Home</a></li>
-<li><a href="#">Kund Registrering</a></li>
-<li><a href="#">Bil Registrering</a></li>
+<li class="active"><a href="http://www.nisha.se/carapp/">Hem</a></li>
+<li><a href="src/html_code/bilReg.php">Bil Registrering</a></li>
 </ul>
 
 <form action="search.php" method="get" enctype="multipart/form-data">
