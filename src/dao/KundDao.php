@@ -3,6 +3,7 @@
 /**
  * Author: Mehmood Alam Khan
  * Email: malagori@kth.se
+ * Dated: 5 April 2014
  */
 
 require_once( "../utility/Utility.php" );
@@ -37,7 +38,6 @@ class KundDao {
 			$phone 		= $_REQUEST['form1_Telefone'];
 			$address 	= $_REQUEST['form1_Adress'];
 			$email 		= $_REQUEST['form1_Epost'];
-			
 			
 			$util = new Utility;
 			$util->dbConnection();

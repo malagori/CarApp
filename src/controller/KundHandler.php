@@ -4,6 +4,7 @@ error_reporting(E_ALL | E_STRICT);
 /**
  * Author: Mehmood Alam Khan
  * Email: malagori@kth.se
+ * Dated: 5 April 2014
  */
 
 require_once( "../dao/KundDao.php" );
@@ -48,7 +49,7 @@ class KundHandler {
 			}
 			else
 			{
-				echo '<META http-equiv="refresh" content="0;URL='.MyConstants::ABS_URL.MyConstants::ADMIN_LOGIN_FAILURE_PAGE.MyConstants::ADMIN_LOGIN_FAILURE.'">';
+				echo '<META http-equiv="refresh" content="0;URL='.MyConstants::ABS_URL.MyConstants::KUND_REG_FAILURE_PAGE.MyConstants::KUND_REG_EXCEPTION.'">';
 			}
 		}
 		catch(CustomException $sqlEx)
@@ -73,5 +74,12 @@ $kundHandler = new KundHandler;
 $action = $_REQUEST["action"];
 
 $done = $kundHandler->processRequest($action);
+
+if($done){
+	echo '<META http-equiv="refresh" content="0;URL='.MyConstants::ABS_URL.'src/html_code/bilReg.php">';
+
+}
+
+
 
 ?>

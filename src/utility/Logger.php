@@ -2,6 +2,7 @@
 /**
  * Author: Mehmood Alam Khan
  * Email: malagori@kth.se
+ * Dated: 5 April 2014
  */
 	// to log all the exceptions that occur during the script execution , exceptions are logged here while a proper message is displayed to the user
 	class Logger

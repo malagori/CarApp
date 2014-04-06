@@ -3,6 +3,7 @@
 /**
  * Author: Mehmood Alam Khan
  * Email: malagori@kth.se
+ * Dated: 5 April 2014
  */
 
 
@@ -31,32 +32,6 @@ class Utility
 
 	}
 	
-	function fileRead($f)
-	{
-		/*
-		 * This function is to read files 
-		 * 
-		 */
-		try{
-			//print($f);
-			$fh = fopen($f, 'r') or die("Unable to open File");
-			$theData;
-			$i = 0;
-			while(!feof($fh))
-			{
-				$theData[$i] = chop(fgets($fh));
-				$i = $i + 1;
-			}
-			fclose($fh);
-			//print_r($theData);
-			return $theData;
-		}
-		catch(Exception $sqlEx)
-		{
-			throw new CustomException("\r\nMessage:Unable to open file - " . $f);	
-		}
-	}
-
 	function dbConnection()
 	{
 		/*

@@ -3,12 +3,13 @@
 /**
  * Author: Mehmood Alam Khan
  * Email: malagori@kth.se
+ * Dated: 5 April 2014
  */
 
 	class MyConstants{
 		public function __construct()
 		{
-	
+
 		}
 	
 		public function __destruct()
@@ -18,9 +19,13 @@
 		const ABS_URL = "http://localhost:8888/carapp/";
 		const APP_NAME="Car Application";			//name of our application
 		
-		const KUND_REG_FAILURE_PAGE = "src/html_code/kundRegFailure.php?msg=";
-		const KUND_REG_SUCCESS_PAGE = "../html_code/kundRegSuccess.php?msg=";
+		const KUND_REG_FAILURE_PAGE = "src/html_code/KundRegFailure.php?msg=";
+		const CAR_REG_FAILURE_PAGE = "src/html_code/CarRegFailure.php?msg=";
+		const DAMAGE_REG_FAILURE_PAGE = "src/html_code/DamageRegFailure.php?msg=";
+		const KUND_REG_SUCCESS_PAGE = "../html_code/KundRegSuccess.php?msg=";
 		const KUND_REG_EXCEPTION = "Problem in registering Customer !!! Please try again ...";
+		const CAR_REG_EXCEPTION = "Problem in registering Car !!! Please try again ...";
+		const DAMAGE_REG_EXCEPTION = "Problem in registering Damage !!! Please try again ...";
 		
 		//database Constants			
 		const DB_HOST = "localhost";			// database server hostname

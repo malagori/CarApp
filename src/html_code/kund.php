@@ -22,7 +22,7 @@ Kund Portion Started
   <label for="form1_Telefone">Telefone</label>
   <input type="text" name="form1_Telefone" id="form1_Telefone" size="30"/>
 </p>
-  <label for="form1_Adress">Adress</label>
+  <label for="form1_Adress">Address</label>
   <input type="text" name="form1_Adress" id="form1_Adress" size="30"/>
 <p>
   <label for="form1_Epost">E-Post</label>
