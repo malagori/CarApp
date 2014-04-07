@@ -8,10 +8,8 @@
 
 <body class="body">
 
-<div><?php include("header.php"); ?></div>
-<div><?php include("bil.php"); ?></div>
-<div> <?php include("includes/sidebar.php"); ?> </div>
-<div><?php include("footer.php"); ?></div>
+<div><h2>Damage Registration</h2></div>
+
 
 
 </body>

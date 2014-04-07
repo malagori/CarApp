@@ -16,7 +16,7 @@
 		{
 	
 		}
-		const ABS_URL = "http://localhost:8888/carapp/";
+		const ABS_URL = "http://localhost/carapp/";
 		const APP_NAME="Car Application";			//name of our application
 		
 		const KUND_REG_FAILURE_PAGE = "src/html_code/KundRegFailure.php?msg=";

@@ -335,6 +335,7 @@ text-align: center;
 }
 
 
+
 #form1_Reg_nr {
     border-color: #BDC7D8;
     border-radius: 2px;
@@ -447,6 +448,7 @@ text-align: center;
     margin-top: -2px;
     padding-left: 5px;
     width: 90%;
+    font-size: 25px;
 }
 #form1_Telefone {
 
@@ -460,6 +462,7 @@ text-align: center;
     margin-top: -2px;
     padding-left: 5px;
     width: 90%;
+    font-size: 25px;
 }
 #form1_Adress {
 
@@ -473,6 +476,7 @@ text-align: center;
     margin-top: -2px;
     padding-left: 5px;
     width: 90%;
+    font-size: 25px;
 }
 #form1_Epost {
 
@@ -486,6 +490,7 @@ text-align: center;
     margin-top: -2px;
     padding-left: 5px;
     width: 90%;
+    font-size: 25px;
 }
 /* Kund Portion End */
 
@@ -631,5 +636,35 @@ border-color: #BDC7D8;
     width: 267px;	
 }
 /* Antal skador Portion End */
+.text {
+    border-color: #BDC7D8;
+    border-radius: 2px;
+    border-width: 0;
+    box-shadow: -1px 1px 5px 0 #888888 inset;
+    font-size: 14px;
+    height: 60px;
+    margin-left: 12px;
+    margin-top: -2px;
+    padding-left: 5px;
+    width: 90%;
+    font-size: 25px;
+    
+}
+.select
+{
+	border-color: #BDC7D8;
+    border-radius: 2px;
+    border-width: 0;
+    box-shadow: -1px 1px 5px 0 #888888 inset;
+    font-size: 14px;
+    height: 60px;
+    margin-left: 12px;
+    margin-top: -2px;
+    padding-left: 5px;
+    width: 90%;
+	line-height:50px;
+    font-size: 24px;
+
+}
 
 </style>
