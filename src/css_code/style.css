@@ -666,5 +666,20 @@ border-color: #BDC7D8;
     font-size: 24px;
 
 }
+.select
+{
+	border-color: #BDC7D8;
+    border-radius: 2px;
+    border-width: 0;
+    box-shadow: -1px 1px 5px 0 #888888 inset;
+    font-size: 14px;
+    height: 60px;
+    margin-left: 12px;
+    margin-top: -2px;
+    padding-left: 5px;
+    width: 90%;
+	line-height:50px;
+
+}
 
 </style>

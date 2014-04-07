@@ -49,6 +49,7 @@
   <label for="form1_m-km">Miltal - km</label>
   <input type="text" name="form1_Miltal" class="select" size="30"/>
 </p>
+    <p>
 <label for="form1_Antaldörrar">
 Antaldörrar
 </label>
@@ -67,6 +68,7 @@ Antaldörrar
     <input type="radio" name="radioD" value="4" id="Antaldoumlrrar_3" />
     Skåp</label>
 </div>
+    </p>
 <p>
   <input value="Registrering" type="submit" id="registerCar">
 </p>
