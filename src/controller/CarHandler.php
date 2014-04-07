@@ -68,7 +68,8 @@ $action = $_REQUEST["action"];
 $done = $carHandler->processRequest($action);
 
 if ($done){
-	echo '<META http-equiv="refresh" content="0;URL='.MyConstants::ABS_URL.MyConstants::KUND_REG_SUCCESS_PAGE.MyConstants::CAR_REG_EXCEPTION.'">';
+	//echo '<META http-equiv="refresh" content="0;URL='.MyConstants::ABS_URL.MyConstants::KUND_REG_SUCCESS_PAGE.MyConstants::CAR_REG_EXCEPTION.'">';
+    echo '<META http-equiv="refresh" content="0;URL='.MyConstants::ABS_URL.'src/html_code/damageReg.php">';
 }
 
 
