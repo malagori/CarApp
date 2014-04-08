@@ -29,12 +29,12 @@ class DamageDao {
 			// get value from the textfields
             
              
-            
+            $InsuranceID = $_REQUEST['bilmarke'];
 			$SkadeNr	= $_REQUEST['form1_skade_nr'];
 			$Skadedag   = $_REQUEST['form1_Skade_dag'];
 			$Skadetyp 	= $_REQUEST['form1_Skadetyp'];
-            $Bokadtid 	= $_REQUEST['form1_Bokad_tid'];
-            
+            $AntalSkador = $_REQUEST['check'];
+        
             
 			$Skadeuppgifte= null;
             
@@ -55,7 +55,7 @@ class DamageDao {
 		
 			$util = new Utility;
 			$util->dbConnection();
-			$query = 'insert into Damage (InsuranceID, SkadeNr, SkadeDay, SkadetypID, AntalSkador, Ersattningsbar, Vallande, Sjalvrisk, Momspliktig) values("'.$SkadeNr.'","'.$SkadeNr.'","'.$Skadedag.'","null","2","2","2","2","'.$Skadetyp.'")';
+			$query = 'insert into Damage (InsuranceID, SkadeNr, SkadeDay, SkadetypID, AntalSkador, Ersattningsbar, Vallande, Sjalvrisk, Momspliktig, REGID) values("'.$InsuranceID.'","'.$SkadeNr.'","'.$Skadedag.'","'.$Skadetyp.'","'.$AntalSkador.'","1","1","1","1","1")';
 			echo $query;
 			$result = $util->executeQuery($query);
 			

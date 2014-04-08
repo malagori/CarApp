@@ -66,7 +66,7 @@ $action = $_REQUEST["action"];
 
 $done = $damageHandler->processRequest($action);
 if($done){
-	echo '<META http-equiv="refresh" content="0;URL='.MyConstants::ABS_URL.'src/html_code/kundReg.php">';
+	echo '<META http-equiv="refresh" content="0;URL='.MyConstants::ABS_URL.'">';
 
 }
 

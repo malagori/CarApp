@@ -12,7 +12,7 @@
   <label for="form1_Bilmärke">F. Bolag</label>
   <select name="bilmarke" class="select">                      
 	<option value="0">--Select Bilmärke--</option>
-	<option value="1">Alfa Romeo</option>
+	<option value="1">IF</option>
 	<option value="2">Aston Martin</option>
 	<option value="3">Audi</option>
   </select>
@@ -27,12 +27,13 @@
   <input type="text" name="form1_Skade_dag" class="text" size="30" />
     </p>
 <p>
-  <label for="form1_Självrisk">Självrisk</label>
-  <input type="text" name="form1_Självrisk" class="text" size="30" />
-</p>
-<p>
   <label for="form1_Skadetyp">Skadetyp</label>
-  <input type="text" name="form1_Skadetyp" class="text" size="30" />
+  <select name="form1_Skadetyp" class="select">                      
+	<option value="0">--Select Skadetyp--</option>
+	<option value="1">Trafik</option>
+	<option value="2">Aston Martin</option>
+	<option value="3">Audi</option>
+  </select>
 </p>
 <label for="form1_Antal_skador">
 Antal skador
@@ -40,23 +41,28 @@ Antal skador
     <div class="check">
         
 <label>
-    <input type="checkbox" name="CheckB" value="Ersättningsbar" id="Ersättningsbar" />
+    <input type="checkbox" name="check" value="1" id="Ersättningsbar" />
     Ersättningsbar 
 </label>
   <label>
-    <input type="checkbox" name="CheckB" value="Vållande" id="Vållande" />
+    <input type="checkbox" name="check" value="1" id="Vållande" />
     Vållande</label>
             
         
   <label>
-    <input type="checkbox" name="CheckB" value="Självrisk" id="Självrisk" />
+    <input type="checkbox" name="check" value="1" id="Självrisk" />
     Självrisk</label>
 
   <label>
-    <input type="checkbox" name="CheckB" value="Momspliktig" id="Momspliktig" />
+    <input type="checkbox" name="check" value="1" id="Momspliktig" />
     Momspliktig</label>
             
 </div>
+    
+<p>
+  <label for="form1_Självrisk">Självrisk</label>
+  <input type="text" name="form1_Sjalvrisk" class="text" size="30" />
+</p>
 <p>
   <label for="form1_Bokad_tid">Bokad tid</label>
   <input type="text" name="form1_Bokad_tid" class="text" size="30"/>
