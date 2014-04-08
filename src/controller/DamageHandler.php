@@ -7,6 +7,10 @@ error_reporting(E_ALL | E_STRICT);
  * Email: malagori@kth.se
  * Dated: 5 April 2014
  */
+require_once( "../dao/DamageDao.php" );
+require_once( "../utility/Logger.php" );	
+require_once('../utility/CustomException.php');
+require_once('../utility/MyConstants.php');
 
 class DamageHandler{
 	
@@ -61,6 +65,10 @@ $damageHandler = new DamageHandler;
 $action = $_REQUEST["action"];
 
 $done = $damageHandler->processRequest($action);
+if($done){
+	echo '<META http-equiv="refresh" content="0;URL='.MyConstants::ABS_URL.'src/html_code/kundReg.php">';
+
+}
 
 
 ?>

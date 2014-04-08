@@ -2,7 +2,7 @@
 <h1 class="h1"> Skada registrering </h1>
 <hr />
 
-<form id="form1" name="form1" method="post" action="../controller/CarHandler.php">
+<form id="form1" name="form1" method="post" action="../controller/DamageHandler.php">
 
 
 <div id="form1_Fordonsuppgifter">
@@ -72,9 +72,9 @@ Antal skador
     
 
 <p>
-  <input value="Registrering" type="submit" id="registerCar">
+  <input value="Registrering" type="submit" id="registerDamage">
 </p>
-<input  type="hidden" name="action" value="registerCar">
+<input  type="hidden" name="action" value="registerDamage">
 </div>
 <!--
 Bil Portion Ended
