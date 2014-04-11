@@ -1,17 +1,23 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.8
+-- version 3.5.8.1deb1
 -- http://www.phpmyadmin.net
 --
--- Host: localhost:8889
--- Generation Time: Apr 06, 2014 at 03:01 PM
--- Server version: 5.5.34
--- PHP Version: 5.5.10
+-- Host: localhost
+-- Generation Time: Apr 11, 2014 at 06:39 PM
+-- Server version: 5.5.34-0ubuntu0.13.04.1
+-- PHP Version: 5.4.9-4ubuntu2.4
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
 --
--- Database: `Nisha_car`
+-- Database: `Nisha_car1`
 --
 
 -- --------------------------------------------------------
@@ -20,7 +26,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `Antaldorrar`
 --
 
-CREATE TABLE `Antaldorrar` (
+CREATE TABLE IF NOT EXISTS `Antaldorrar` (
   `AntaldorrarID` int(20) NOT NULL,
   `Type` varchar(50) NOT NULL,
   PRIMARY KEY (`AntaldorrarID`)
@@ -42,7 +48,7 @@ INSERT INTO `Antaldorrar` (`AntaldorrarID`, `Type`) VALUES
 -- Table structure for table `Bilmarke`
 --
 
-CREATE TABLE `Bilmarke` (
+CREATE TABLE IF NOT EXISTS `Bilmarke` (
   `BilmarkeID` int(20) NOT NULL,
   `BrandName` varchar(50) NOT NULL,
   PRIMARY KEY (`BilmarkeID`)
@@ -62,7 +68,7 @@ INSERT INTO `Bilmarke` (`BilmarkeID`, `BrandName`) VALUES
 -- Table structure for table `Car`
 --
 
-CREATE TABLE `Car` (
+CREATE TABLE IF NOT EXISTS `Car` (
   `REGID` varchar(50) NOT NULL,
   `BilmarkeID` int(20) DEFAULT NULL,
   `Model` varchar(20) DEFAULT NULL,
@@ -92,7 +98,7 @@ INSERT INTO `Car` (`REGID`, `BilmarkeID`, `Model`, `ArsYear`, `Miltal`, `Antaldo
 -- Table structure for table `Customer`
 --
 
-CREATE TABLE `Customer` (
+CREATE TABLE IF NOT EXISTS `Customer` (
   `CID` int(20) NOT NULL AUTO_INCREMENT,
   `FirstName` varchar(50) NOT NULL,
   `LastName` varchar(50) NOT NULL,
@@ -120,7 +126,7 @@ INSERT INTO `Customer` (`CID`, `FirstName`, `LastName`, `Address`, `Email`) VALU
 -- Table structure for table `Damage`
 --
 
-CREATE TABLE `Damage` (
+CREATE TABLE IF NOT EXISTS `Damage` (
   `DID` int(20) NOT NULL AUTO_INCREMENT,
   `InsuranceID` int(20) NOT NULL,
   `SkadeNr` int(20) NOT NULL,
@@ -145,7 +151,7 @@ CREATE TABLE `Damage` (
 -- Table structure for table `DamageTypes`
 --
 
-CREATE TABLE `DamageTypes` (
+CREATE TABLE IF NOT EXISTS `DamageTypes` (
   `DTID` int(20) NOT NULL AUTO_INCREMENT,
   `DamageType` varchar(50) NOT NULL,
   `Description` varchar(100) DEFAULT NULL,
@@ -158,7 +164,7 @@ CREATE TABLE `DamageTypes` (
 -- Table structure for table `FargKod`
 --
 
-CREATE TABLE `FargKod` (
+CREATE TABLE IF NOT EXISTS `FargKod` (
   `FargKodID` int(20) NOT NULL AUTO_INCREMENT,
   `ColorType` varchar(50) NOT NULL,
   PRIMARY KEY (`FargKodID`)
@@ -184,7 +190,7 @@ INSERT INTO `FargKod` (`FargKodID`, `ColorType`) VALUES
 -- Table structure for table `Insurance`
 --
 
-CREATE TABLE `Insurance` (
+CREATE TABLE IF NOT EXISTS `Insurance` (
   `InsuranceID` int(20) NOT NULL AUTO_INCREMENT,
   `CompanyName` varchar(50) NOT NULL,
   PRIMARY KEY (`InsuranceID`)
@@ -196,7 +202,7 @@ CREATE TABLE `Insurance` (
 -- Table structure for table `NewDamages`
 --
 
-CREATE TABLE `NewDamages` (
+CREATE TABLE IF NOT EXISTS `NewDamages` (
   `NDID` int(20) NOT NULL AUTO_INCREMENT,
   `REGID` varchar(50) NOT NULL,
   `DTID` int(20) NOT NULL,
@@ -212,7 +218,7 @@ CREATE TABLE `NewDamages` (
 -- Table structure for table `OldDamages`
 --
 
-CREATE TABLE `OldDamages` (
+CREATE TABLE IF NOT EXISTS `OldDamages` (
   `ODID` int(20) NOT NULL AUTO_INCREMENT,
   `REGID` varchar(50) NOT NULL,
   `DTID` int(20) NOT NULL,
@@ -228,7 +234,7 @@ CREATE TABLE `OldDamages` (
 -- Table structure for table `Phone`
 --
 
-CREATE TABLE `Phone` (
+CREATE TABLE IF NOT EXISTS `Phone` (
   `PID` int(11) NOT NULL AUTO_INCREMENT,
   `Mobile` int(13) NOT NULL,
   `LandLine` int(13) DEFAULT NULL,
@@ -244,7 +250,7 @@ CREATE TABLE `Phone` (
 -- Table structure for table `QR`
 --
 
-CREATE TABLE `QR` (
+CREATE TABLE IF NOT EXISTS `QR` (
   `QRID` int(20) NOT NULL AUTO_INCREMENT,
   `Link` varchar(200) NOT NULL,
   `PathToQR` varchar(500) NOT NULL,
@@ -261,7 +267,7 @@ CREATE TABLE `QR` (
 -- Table structure for table `Skadetyp`
 --
 
-CREATE TABLE `Skadetyp` (
+CREATE TABLE IF NOT EXISTS `Skadetyp` (
   `SkadetypID` int(20) NOT NULL AUTO_INCREMENT,
   `DamageReason` varchar(50) NOT NULL,
   PRIMARY KEY (`SkadetypID`)
@@ -273,7 +279,7 @@ CREATE TABLE `Skadetyp` (
 -- Table structure for table `Status`
 --
 
-CREATE TABLE `Status` (
+CREATE TABLE IF NOT EXISTS `Status` (
   `STID` int(20) NOT NULL AUTO_INCREMENT,
   `StatusType` varchar(20) NOT NULL,
   `StartEnd` varchar(20) NOT NULL,
@@ -286,6 +292,28 @@ CREATE TABLE `Status` (
   KEY `REGID` (`REGID`),
   KEY `REGID_2` (`REGID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `User`
+--
+
+CREATE TABLE IF NOT EXISTS `User` (
+  `UID` int(10) NOT NULL AUTO_INCREMENT,
+  `Fullname` varchar(50) NOT NULL,
+  `Username` varchar(50) NOT NULL,
+  `Email` varchar(50) NOT NULL,
+  `Password` varchar(50) NOT NULL,
+  PRIMARY KEY (`UID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `User`
+--
+
+INSERT INTO `User` (`UID`, `Fullname`, `Username`, `Email`, `Password`) VALUES
+(1, 'Zia Ullah', 'Admin', 'zia_gt@yahoo.com', 'pakistan123');
 
 --
 -- Constraints for dumped tables
@@ -339,3 +367,7 @@ ALTER TABLE `QR`
 --
 ALTER TABLE `Status`
   ADD CONSTRAINT `Status_ibfk_1` FOREIGN KEY (`REGID`) REFERENCES `Car` (`REGID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

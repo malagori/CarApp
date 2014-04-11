@@ -7,14 +7,12 @@ error_reporting(E_ALL | E_STRICT);
  * Dated: 5 April 2014
  */
 
-require_once( "../dao/KundDao.php" );
+require_once( "../dao/LoginDao.php" );
 require_once( "../utility/Logger.php" );	
 require_once('../utility/CustomException.php');
 require_once('../utility/MyConstants.php');
 
-
-
-class KundHandler {
+class LoginHandler {
 
 	public function __construct()
 	{
@@ -31,21 +29,21 @@ class KundHandler {
 		 * This function handles usecases related to Kund 
 		 */
 
-		if ($action == "registerKund"){
-			return $this->registerKund();
-		}else if ($action == "searchKund"){
-			return $this->searchKund(); 
+		if ($action == "LoginAdmin"){
+			return $this->LoginAdmin();
+		}else if ($action == "LoginUser"){
+			return $this->LoginUser(); 
 		}
 	}
 	
-	function registerKund(){
+	function LoginAdmin(){
 		try{
-			$registered = false;
-			$kundDAO = new KundDao;
+			$LoginAdmin = false;
+			$LoginDAO = new LoginDao;
 			//$registered = $kundDAO->checkKund();
-			if ($registered == false)
+			if ($LoginAdmin == false)
 			{
-				$registered = $kundDAO->registerKund();
+				$LoginAdmin = $LoginDAO->LoginAdmin();
 			}
 			else
 			{
@@ -64,20 +62,33 @@ class KundHandler {
 			Logger::logException($msg);
 			echo '<META http-equiv="refresh" content="0;URL='.MyConstants::ABS_URL.MyConstants::KUND_REG_FAILURE_PAGE.MyConstants::KUND_REG_EXCEPTION.'">';
 		}
-		return $registered;
+		return $LoginAdmin;
 	}
 
 }
 
 // create object of KundHandler class
-$kundHandler = new KundHandler;
+$LoginHandler = new LoginHandler;
 $action = $_REQUEST["action"];
 
-$done = $kundHandler->processRequest($action);
+$done = $LoginHandler->processRequest($action);
 
-if($done){
-	echo '<META http-equiv="refresh" content="0;URL='.MyConstants::ABS_URL.'src/html_code/bilReg.php">';
+if($done)
 
+{
+
+$_SESSION['logged']=MyConstants::ADMIN_SET;
+$expiretime = MyConstants::ADMIN_SESSION_EXPIRE_TIME;
+$_SESSION['expire'] = time() + $expiretime;
+
+ echo '<META http-equiv="refresh" content="0;URL='.MyConstants::ABS_URL.'src/html/Index.php?'.SID.'">';
+}
+else
+{
+$_SESSION['logged']=MyConstants::ADMIN_CLEAR;
+$expiretime = MyConstants::ADMIN_EXPIRED_VALUE; // 2 hours
+$_SESSION['expire'] = time()+$expiretime;
+echo '<META http-equiv="refresh" content="0;URL='.MyConstants::ABS_URL.'index.php">';
 }
 
 

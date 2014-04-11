@@ -16,7 +16,7 @@
 		{
 	
 		}
-		const ABS_URL = "http://localhost/carapp/";
+		const ABS_URL = "http://localhost/carapp.com/";
 		const APP_NAME="Car Application";			//name of our application
 		
 		const KUND_REG_FAILURE_PAGE = "src/html_code/KundRegFailure.php?msg=";
@@ -31,7 +31,7 @@
 		const DB_HOST = "localhost";			// database server hostname
 		const DB_USER = "mehmood";				// database access username
 		const DB_PASSWORD = "123";					// database access password
-		const DB_NAME = "Nisha_car";			// name of database
+		const DB_NAME = "Nisha_car1";			// name of database
 		
 
 		const POST='post';
@@ -59,6 +59,17 @@
 		const ADDRESS_LENGTH 	=500;
 		const EMAIL_LENGTH		=50;
 		
+        //Login Session Contants
+        const ADMIN_SET = 1;
+        const ADMIN_CLEAR = 0;
+        const ADMIN_SESSION_EXPIRE_TIME = 10;
+        
+        
+const SESSION_EXPIRED_MSG = "Location: http://localhost/html/admin_login_failure.php?msg=Session Expired!!! You have to login again...";
+const NOT_LOGGED_MSG = "Location: http://localhost/html/admin_login_failure.php?msg=You are not logged in!!!";
+
+
+
 				
 	}
 
