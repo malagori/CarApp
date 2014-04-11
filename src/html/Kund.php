@@ -23,14 +23,15 @@
 <body>
     
 <div class="register">
-     <h1>Registrering Användaren</h1>
-   <form action="src/controller/LoginHandler.php" method="post">
-   <input class="input-lg" type="text" placeholder="Enter Name" name="Name">
-   <input class="input-lg" type="text" placeholder="Enter Username" name="UserName">
-   <input class="input-lg" type="email" placeholder="Enter Email" name="Email">
-   <input class="input-lg" type="password" placeholder="Enter Password" name="Password">
-   <input class="btn-primary btn-lg" type="submit" name="submit" value="Register">
-   <input type="hidden" value="RegisterUser" name="action">
+     <h1>Kund Registrering </h1>
+   <form id="form1" name="form1" method="post" action="../controller/KundHandler.php">
+   <input class="input-lg" type="text" placeholder="Ange Förnamn" name="fornamn">
+   <input class="input-lg" type="text" placeholder="Ange Efternamn" name="Efternamn">
+   <input class="input-lg" type="text" placeholder="Ange Telefone" name="form1_Telefone">
+   <input class="input-lg" type="text" placeholder="Ange Adress" name="form1_Adress">
+   <input class="input-lg" type="email" placeholder="Ange E-post" name="form1_Epost">   
+   <input class="btn-primary btn-lg" value="Registrering" type="submit" id="registerKund">
+   <input  type="hidden" name="action" value="registerKund">
     </form> 
  </div>
     

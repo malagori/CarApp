@@ -10,11 +10,10 @@ require_once( "../utility/Utility.php" );
 require_once('../utility/CustomException.php');
 require_once('../utility/MyConstants.php');
 
-class LoginDao {
+class KundDao {
 
 	public function __construct()
 	{
-     
 
 	}
 
@@ -23,36 +22,34 @@ class LoginDao {
 
 	}
 	
-	function LoginUser(){
+	function checkKund(){
 		/*
 		 * check if the kund already exist in the database
 		 */
 		
 	}
 	
-	function LoginAdmin(){
+	function registerKund(){
 		try{
-			$LoginAdmin = false;
+			$registered = false;
 			// get value from the textfields
-
-			$UserName 	= $_REQUEST['username'];
-			$Password 	= $_REQUEST['password'];
-            
-            
+			$firstNamn 	= $_REQUEST['fornamn'];
+			$efterNamn 	= $_REQUEST['Efternamn'];
+			$phone 		= $_REQUEST['form1_Telefone'];
+			$address 	= $_REQUEST['form1_Adress'];
+			$email 		= $_REQUEST['form1_Epost'];
+			
 			$util = new Utility;
 			$util->dbConnection();
-            
-			$query = "SELECT * FROM `User` WHERE `UserName`='".$UserName."' AND `Password`='".$Password."'";
-			//echo $query;
-            $sql = $util->executeQuery($query);
-			$result = mysqli_num_rows($sql);
-            
+			$query = 'insert into Customer(FirstName, LastName, Address, Email) values("'.$firstNamn.'","'.$efterNamn.'","'.$address.'","'.$email.'")';
+			echo $query;
+            $result = $util->executeQuery($query);
+			
 			$util->dbClose();
 			
 			if($result>0)
 			{
-				$LoginAdmin = true;
-                
+				$registered = true;
 			}
 		}
 		catch(CustomException $sqlEx)
@@ -63,7 +60,7 @@ class LoginDao {
 		{			
 			throw new CustomException($genEx->getMessage());
 		}
-		return $LoginAdmin;
+		return $registered;
 	}
 }
 ?>

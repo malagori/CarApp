@@ -1,12 +1,4 @@
-<?php
-session_start();
-require_once('utility/my_constants.php');
 
-if($_SESSION['logged']!=MyConstants::ADMIN_SET)
-header( MyConstants::NOT_LOGGED_MSG );
-if($_SESSION['expire'] < time())
-header( MyConstants::SESSION_EXPIRED_MSG );
-?>
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="../../resources/css/bootstrap.css">
@@ -34,7 +26,8 @@ header( MyConstants::SESSION_EXPIRED_MSG );
  <aside>
  <nav class="navbar">
   <a class="btn-danger active" href="?page=Main">Home</a>
-  <a class="btn-danger" href="?page=User">Register User</a>
+  <a class="btn-danger" href="?page=User">Registrering Användaren</a>
+  <a class="btn-danger" href="?page=Kund">Kund Användaren</a>
   <a class="btn-danger" href="?page=Bilmarke">Add Bilmarke</a>
   <a class="btn-danger" href="?page=Farg_Kod">Add Farg Kod</a>
   <a class="btn-danger" href="?page=Insurance">Add Insurance</a>
