@@ -1,6 +1,7 @@
 <?php
 ini_set('display_errors', 'On');
 error_reporting(E_ALL | E_STRICT);
+
 /**
  * Author: Mehmood Alam Khan
  * Email: malagori@kth.se
@@ -8,7 +9,7 @@ error_reporting(E_ALL | E_STRICT);
  */
 
 require_once( "../dao/LoginDao.php" );
-require_once( "../utility/Logger.php" );	
+require_once( "../utility/Logger.php" );
 require_once('../utility/CustomException.php');
 require_once('../utility/MyConstants.php');
 
@@ -16,7 +17,7 @@ class LoginHandler {
 
 	public function __construct()
 	{
-	
+
 	}
 
 	public function __destruct()
@@ -24,29 +25,30 @@ class LoginHandler {
 
 	}
 
-	function processRequest($action){
+	function ProcessRequest($action){
 		/*
-		 * This function handles usecases related to Kund 
+		 * This function handles usecases related to Kund
 		 */
 
-		if ($action == "LoginAdmin"){
-			return $this->LoginAdmin();
-		}else if ($action == "LoginUser"){
-			return $this->LoginUser(); 
+		if ($action == "LoginUser"){
+			return $this->LoginUser();
+		}else if ($action == "LogoutUser"){
+			return $this->logoutUser();
 		}
 	}
-	
-	function LoginAdmin(){
+
+	function LoginUser(){
 		try{
-			$LoginAdmin = false;
-			$LoginDAO = new LoginDao;
+			$loginUser = false;
+			$loginDAO = new LoginDao;
 			//$registered = $kundDAO->checkKund();
-			if ($LoginAdmin == false)
+			if ($loginUser == false)
 			{
-				$LoginAdmin = $LoginDAO->LoginAdmin();
+				$loginUser = $loginDAO->LoginUser();
 			}
 			else
 			{
+				session_destroy();
 				echo '<META http-equiv="refresh" content="0;URL='.MyConstants::ABS_URL.MyConstants::KUND_REG_FAILURE_PAGE.MyConstants::KUND_REG_EXCEPTION.'">';
 			}
 		}
@@ -62,7 +64,7 @@ class LoginHandler {
 			Logger::logException($msg);
 			echo '<META http-equiv="refresh" content="0;URL='.MyConstants::ABS_URL.MyConstants::KUND_REG_FAILURE_PAGE.MyConstants::KUND_REG_EXCEPTION.'">';
 		}
-		return $LoginAdmin;
+		return $loginUser;
 	}
 
 }
@@ -71,24 +73,27 @@ class LoginHandler {
 $LoginHandler = new LoginHandler;
 $action = $_REQUEST["action"];
 
-$done = $LoginHandler->processRequest($action);
+$done = $LoginHandler->ProcessRequest($action);
 
-if($done)
+$userName 	= $_REQUEST['username'];
 
-{
+if($done == True and $userName == MyConstants::ADMIN_USERNAME){	
+	$_SESSION['logged']=MyConstants::ADMIN_SET;
+	$expiretime = MyConstants::ADMIN_SESSION_EXPIRE_TIME;
+	$_SESSION['expire'] = time() + $expiretime;
 
-$_SESSION['logged']=MyConstants::ADMIN_SET;
-$expiretime = MyConstants::ADMIN_SESSION_EXPIRE_TIME;
-$_SESSION['expire'] = time() + $expiretime;
+	echo '<META http-equiv="refresh" content="0;URL='.MyConstants::ABS_URL.'src/html/Index.php">';
 
- echo '<META http-equiv="refresh" content="0;URL='.MyConstants::ABS_URL.'src/html/Index.php?'.SID.'">';
-}
-else
-{
-$_SESSION['logged']=MyConstants::ADMIN_CLEAR;
-$expiretime = MyConstants::ADMIN_EXPIRED_VALUE; // 2 hours
-$_SESSION['expire'] = time()+$expiretime;
-echo '<META http-equiv="refresh" content="0;URL='.MyConstants::ABS_URL.'index.php">';
+}else if ($done == True and $userName != MyConstants::ADMIN_USERNAME){
+	$_SESSION['logged']=MyConstants::ADMIN_SET;
+	$expiretime = MyConstants::ADMIN_SESSION_EXPIRE_TIME;
+	$_SESSION['expire'] = time() + $expiretime;
+
+	echo '<META http-equiv="refresh" content="0;URL='.MyConstants::ABS_URL.'src/html/UserMain.php">';
+	
+}else{
+	
+	$_SESSION['logged']=MyConstants::ADMIN_CLEAR;
 }
 
 

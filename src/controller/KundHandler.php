@@ -7,8 +7,8 @@ error_reporting(E_ALL | E_STRICT);
  * Dated: 5 April 2014
  */
 
-require_once( "../dao/KundDao.php" );
-require_once( "../utility/Logger.php" );	
+require_once('../dao/KundDao.php');
+require_once('../utility/Logger.php');	
 require_once('../utility/CustomException.php');
 require_once('../utility/MyConstants.php');
 
@@ -76,7 +76,7 @@ $action = $_REQUEST["action"];
 $done = $kundHandler->processRequest($action);
 
 if($done){
-	echo '<META http-equiv="refresh" content="0;URL='.MyConstants::ABS_URL.'src/html/Index.php?page=Bil">';
+	echo '<META http-equiv="refresh" content="0;URL='.MyConstants::ABS_URL.'src/html/UserMain.php?page=Bil">';
    
 
 }

@@ -27,12 +27,12 @@
 <div id="contents">
  <section id="page">
  <div class="login">
-     <h1>Administrator Login</h1>
+     <h1>Login</h1>
    <form action="src/controller/LoginHandler.php" method="post">
    <input class="input-lg" type="text" placeholder="Enter Username" name="username">
    <input class="input-lg" type="password" placeholder="Enter Password" name="password">
    <input class="btn-primary btn-lg" type="submit" name="submit" value="Login">
-   <input type="hidden" value="LoginAdmin" name="action">
+   <input type="hidden" value="LoginUser" name="action">
     </form> 
  </div>
      

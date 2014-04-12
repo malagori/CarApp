@@ -42,8 +42,7 @@ class KundDao {
 			$util = new Utility;
 			$util->dbConnection();
 			$query = 'insert into Customer(FirstName, LastName, Address, Email) values("'.$firstNamn.'","'.$efterNamn.'","'.$address.'","'.$email.'")';
-			echo $query;
-            $result = $util->executeQuery($query);
+			$result = $util->executeQuery($query);
 			
 			$util->dbClose();
 			

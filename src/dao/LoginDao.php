@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 /**
  * Author: Mehmood Alam Khan
@@ -23,26 +24,26 @@ class LoginDao {
 
 	}
 	
-	function LoginUser(){
+	function CheckUser(){
 		/*
 		 * check if the kund already exist in the database
 		 */
 		
 	}
 	
-	function LoginAdmin(){
+	function LoginUser(){
 		try{
-			$LoginAdmin = false;
+			$loginUser = false;
 			// get value from the textfields
 
-			$UserName 	= $_REQUEST['username'];
-			$Password 	= $_REQUEST['password'];
+			$userName 	= $_REQUEST['username'];
+			$password 	= $_REQUEST['password'];
             
             
 			$util = new Utility;
 			$util->dbConnection();
             
-			$query = "SELECT * FROM `User` WHERE `UserName`='".$UserName."' AND `Password`='".$Password."'";
+			$query = "SELECT * FROM `User` WHERE `UserName`='".$userName."' AND `Password`='".$password."'";
 			//echo $query;
             $sql = $util->executeQuery($query);
 			$result = mysqli_num_rows($sql);
@@ -51,7 +52,7 @@ class LoginDao {
 			
 			if($result>0)
 			{
-				$LoginAdmin = true;
+				$loginUser = true;
                 
 			}
 		}
@@ -63,7 +64,7 @@ class LoginDao {
 		{			
 			throw new CustomException($genEx->getMessage());
 		}
-		return $LoginAdmin;
+		return $loginUser;
 	}
 }
 ?>
