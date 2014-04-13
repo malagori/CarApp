@@ -1,6 +1,21 @@
-<?php
-    session_start();
+<?PHP
+
+session_start();
+require_once('../utility/MyConstants.php');
+if ($_SESSION['loggedUser'] ==  MyConstants::ADMIN_USERNAME){
+	
+	if($_SESSION['logged']!=MyConstants::ADMIN_SET)
+	header( MyConstants::NOT_LOGGED_MSG );
+	if($_SESSION['expire'] < time() )
+	header( MyConstants::SESSION_EXPIRED_MSG );
+
+} else{
+    $_SESSION = array(); 
+    session_destroy();
+	header( MyConstants::PERMISSION_DENIED );
+} 
 ?>
+
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="http://localhost/carapp.com/resources/css/bootstrap.css">
@@ -24,7 +39,7 @@
     
 <div class="register">
      <h1>Registrering Användaren</h1>
-   <form action="src/controller/LoginHandler.php" method="post">
+   <form action="../controller/UserHandler.php" method="post">
    <input class="input-lg" type="text" placeholder="Enter Name" name="Name">
    <input class="input-lg" type="text" placeholder="Enter Username" name="UserName">
    <input class="input-lg" type="email" placeholder="Enter Email" name="Email">

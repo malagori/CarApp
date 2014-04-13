@@ -1,12 +1,17 @@
 <?PHP
+
 session_start();
-
 require_once('../utility/MyConstants.php');
-
-if($_SESSION['logged']!=MyConstants::ADMIN_SET)
+if ($_SESSION['loggedUser'] ==  MyConstants::ADMIN_USERNAME){
+	
+	if($_SESSION['logged']!=MyConstants::ADMIN_SET)
 	header( MyConstants::NOT_LOGGED_MSG );
-if($_SESSION['expire'] < time())
+	if($_SESSION['expire'] < time() )
 	header( MyConstants::SESSION_EXPIRED_MSG );
+
+} else{
+	header( MyConstants::PERMISSION_DENIED );
+} 
 ?>
 <html>
 <head>

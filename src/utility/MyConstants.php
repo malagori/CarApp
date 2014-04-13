@@ -24,6 +24,7 @@ class MyConstants{
 	const KUND_REG_EXCEPTION = "Problem in registering Customer !!! Please try again ...";
 	const CAR_REG_EXCEPTION = "Problem in registering Car !!! Please try again ...";
 	const DAMAGE_REG_EXCEPTION = "Problem in registering Damage !!! Please try again ...";
+    const PERMISSION_DENIED= "Location: http://localhost/carapp/index.php?msg=Permission Denied!!!";
 
 	//database Constants
 	const DB_HOST = "localhost";			// database server hostname

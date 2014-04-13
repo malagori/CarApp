@@ -1,5 +1,24 @@
+<?PHP
+
+session_start();
+require_once('../utility/MyConstants.php');
+if ($_SESSION['loggedUser'] ==  MyConstants::ADMIN_USERNAME){
+	
+	if($_SESSION['logged']!=MyConstants::ADMIN_SET)
+	header( MyConstants::NOT_LOGGED_MSG );
+	if($_SESSION['expire'] < time() )
+	header( MyConstants::SESSION_EXPIRED_MSG );
+
+} else{
+	header( MyConstants::PERMISSION_DENIED );
+} 
+?>
+
 <?php
-    session_start();
+    require_once( "../utility/Utility.php" );
+    require_once( "../utility/Logger.php" );	
+    require_once('../utility/CustomException.php');
+    require_once('../utility/MyConstants.php'); 
 ?>
 <html>
 <head>
@@ -21,10 +40,29 @@
 </head>
 
 <body>
+
+<?php
+    $con=mysqli_connect("localhost","mehmood","123","Nisha_car1");
+
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+      
+    $query = mysql_query("SELECT * FROM `Bilmarke`");
+    while($select = mysql_fetch_array($query))
+    {
+    echo $select[Bilmarke];
+         echo $select[Bilmarke];
+    }
+
+mysqli_close($con);
+    ?>
     
 <div class="register">
      <h1>Add Bilmarke</h1>
-   <form action="src/controller/BilmarkeHandler.php" method="post">
+   <form action="../controller/BilmarkeHandler.php" method="post">
    <input class="input-lg" type="text" placeholder="Enter Bilmarke" name="Bilmarke">
    <input class="btn-primary btn-lg" type="submit" name="submit" value="Add Bilmarke">
    <input type="hidden" value="AddBilmarke" name="action">

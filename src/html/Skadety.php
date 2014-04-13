@@ -1,6 +1,21 @@
-<?php
-    session_start();
+<?PHP
+
+session_start();
+require_once('../utility/MyConstants.php');
+if ($_SESSION['loggedUser'] ==  MyConstants::ADMIN_USERNAME){
+	
+	if($_SESSION['logged']!=MyConstants::ADMIN_SET)
+	header( MyConstants::NOT_LOGGED_MSG );
+	if($_SESSION['expire'] < time() )
+	header( MyConstants::SESSION_EXPIRED_MSG );
+
+} else{
+    $_SESSION = array(); 
+    session_destroy();
+	header( MyConstants::PERMISSION_DENIED );
+} 
 ?>
+
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="http://localhost/carapp.com/resources/css/bootstrap.css">
@@ -24,7 +39,7 @@
     
 <div class="register">
      <h1>Add Skadetyp</h1>
-   <form action="src/controller/SkadetypHandler.php" method="post">
+   <form action="../controller/SkadetypHandler.php" method="post">
    <input class="input-lg" type="text" placeholder="Enter Skadetyp" name="Skadetyp">
    <input class="btn-primary btn-lg" type="submit" name="submit" value="Add Skadetyp">
    <input type="hidden" value="AddSkadetyp" name="action">

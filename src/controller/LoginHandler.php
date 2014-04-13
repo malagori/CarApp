@@ -81,8 +81,9 @@ if($done == True and $userName == MyConstants::ADMIN_USERNAME){
 	$_SESSION['logged']=MyConstants::ADMIN_SET;
 	$expiretime = MyConstants::ADMIN_SESSION_EXPIRE_TIME;
 	$_SESSION['expire'] = time() + $expiretime;
+    $_SESSION['loggedUser']= $userName;
 
-	echo '<META http-equiv="refresh" content="0;URL='.MyConstants::ABS_URL.'src/html/Index.php">';
+	echo '<META http-equiv="refresh" content="0;URL='.MyConstants::ABS_URL.'src/html/AdminMain.php">';
 
 }else if ($done == True and $userName != MyConstants::ADMIN_USERNAME){
 	$_SESSION['logged']=MyConstants::ADMIN_SET;
