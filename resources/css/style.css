@@ -212,5 +212,20 @@ input[type=radio]:hover
     padding-bottom: 20px;
     margin: -5px auto -5px auto;
 }
+.table-checkbox td{
+	padding: 0px 6px;
 
+}
 
+.carStatus 
+{
+    background-color: #FAFAFA;  
+    width: 50%; 
+    margin: 10px auto 10px auto; 
+    min-height: 300px; 
+    border-radius: 5px solid #ddd; 
+    text-align: center;  
+    padding: 35px; 
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}

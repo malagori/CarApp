@@ -60,6 +60,15 @@ class Utility
 		return mysqli_query($this->getConnection(), $myQuery);
 	}
 	
+	function returnNumRows($sql){
+		return mysqli_num_rows($sql);
+	}
+	
+	function fetchArray($results){
+		return mysqli_fetch_array($results);
+	}
+	
+	
 	function begin()
 	{
 		@mysqli_query("BEGIN");

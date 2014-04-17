@@ -1,17 +1,5 @@
 <?PHP
-
 session_start();
-require_once('../utility/MyConstants.php');
-if ($_SESSION['loggedUser'] ==  MyConstants::ADMIN_USERNAME){
-	
-	if($_SESSION['logged']!=MyConstants::ADMIN_SET)
-	header( MyConstants::NOT_LOGGED_MSG );
-	if($_SESSION['expire'] < time() )
-	header( MyConstants::SESSION_EXPIRED_MSG );
-
-} else{
-	header( MyConstants::PERMISSION_DENIED );
-} 
 ?>
 <html>
 <head>
@@ -29,46 +17,78 @@ if ($_SESSION['loggedUser'] ==  MyConstants::ADMIN_USERNAME){
 <script type="text/javascript" src="http://localhost/carapp/resources/resources/js/bootstrap.js"></script>
 <script type="text/javascript" src="http://localhost/carapp/resources/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="http://localhost/carapp/resources/js/jquery.js"></script>
-
+<style type="text/css">
+	.table{
+	 background-color: #FAFAFA;  
+    width: 50%; 
+    margin: 10px auto 10px auto; 
+    min-height: 300px; 
+    border-radius: 5px solid #ddd; 
+    text-align: left;  
+    padding: 35px; 
+    border: 1px solid #ddd;
+    border-radius: 20px;
+	}
+</style>   
 </head>
 
 <body>
 <div class="container">
-<header><img src="../../resources/images/Header.png" alt="Logo"></header>
+<header><img src="http://localhost/carapp/resources/images/Header.png" alt="Logo"></header>
 <div class="clear"></div>
 <div id="contents">
  <aside>
  <nav class="navbar">
-  <a class="btn-danger active" href="?page=Main">Home</a>
-  <a class="btn-danger" href="?page=Kund">Kund Registrering</a>
-  <a class="btn-danger" href="?page=Bil">Bil Registrering</a>
-  <a class="btn-danger" href="?page=Damage">Damage </a>
-  <a class="btn-danger" href="?page=User">Registrering Användaren</a>
-  <a class="btn-danger" href="?page=Kund">Kund Användaren</a>
-  <a class="btn-danger" href="?page=Bilmarke">Add Bilmarke</a>
-  <a class="btn-danger" href="?page=Farg_Kod">Add Farg Kod</a>
-  <a class="btn-danger" href="?page=Insurance">Add Insurance</a>
-  <a class="btn-danger" href="?page=Skadety">Add Skadety</a>
+  <a class="btn-danger active" href="?page=Status">Status</a>
+	
  </nav>
  </aside>
+
  <section id="page">
+ <div class="table">
  <?php
 
-if (@$_GET['page'])
-{
-$url = $_GET['page'].".php";
-   if (is_file($url)) 
-       {
-   include $url;
-        } else {
-   echo 'Page not found';
-   }
-}else {
+	$allRecords= $_SESSION['allRecords'];
+ 	$max = sizeof($allRecords);
 
-    include 'Main.php';
-}
+ 	echo "<table align='center' border= 1px solid #ddd;>";
+ 	for($i = 0; $i < $max-1;$i++){
+ 		echo "<tr>";
+ 		echo "<td >";
+ 		echo $allRecords[0]['StatusType'];
+ 		echo "</td>";
+ 		echo "<td>";
+ 		echo "&nbsp";
+ 		echo "Done";
+ 		echo "</td>";
+ 		echo "</tr>";
+		
+	}
+	echo "<tr>";
+	echo "<td>";
+ 	echo $allRecords[$max-1]['StatusType'];
+ 	echo "</td>";
+ 	echo "<td>";
+ 	echo "&nbsp";
+ 	echo $allRecords[$max-1]['StartEnd'];
+ 	echo "</td>";
+ 	
+ 	echo "<td>";
+ 	echo "&nbsp";
+	echo $allRecords[$max-1]['Description'];
+	echo "</td>";
+	
+ 	echo "<td>";
+ 	echo "&nbsp";
+	echo $allRecords[$max-1]['REGID'];
+	echo "</td>";
+	
+ 	echo "</tr>";
+ 	echo "</table>";
+ 	
      
   ?>   
+  </div>
  </section>
 
 </div>

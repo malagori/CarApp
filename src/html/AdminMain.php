@@ -48,7 +48,7 @@ if ($_SESSION['loggedUser'] ==  MyConstants::ADMIN_USERNAME){
   <a class="btn-danger" href="?page=Damage">Damage Användaren </a>
   <a class="btn-danger" href="?page=User">Registrering Användaren</a>
   <a class="btn-danger" href="?page=Bilmarke">Add Bilmarke</a>
-  <a class="btn-danger" href="?page=Farg_Kod">Add Farg Kod</a>
+  <a class="btn-danger" href="?page=FargKod">Add Farg Kod</a>
   <a class="btn-danger" href="?page=Insurance">Add Insurance</a>
   <a class="btn-danger" href="?page=Skadety">Add Skadety</a>
  </nav>

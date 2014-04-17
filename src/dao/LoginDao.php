@@ -46,7 +46,8 @@ class LoginDao {
 			$query = "SELECT * FROM `User` WHERE `UserName`='".$userName."' AND `Password`='".$password."'";
 			//echo $query;
             $sql = $util->executeQuery($query);
-			$result = mysqli_num_rows($sql);
+			//$result = mysqli_num_rows($sql);
+			$result = $util->returnNumRows($sql);
             
 			$util->dbClose();
 			

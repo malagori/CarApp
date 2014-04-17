@@ -29,3 +29,28 @@ New Exception  Dated : 04/05/14 :22:39:37
 Exception : Error on line 56 in /Applications/MAMP/htdocs/carapp/src/dao/KundDao.phpError on line 66 in /Applications/MAMP/htdocs/carapp/src/utility/Utility.php
 Message:Database Connection Error
 Function :Utility: dbConnection() 
+
+New Exception  Dated : 04/15/14 :16:43:14
+Exception : Error on line 61 in /Applications/MAMP/htdocs/latestcarapp/src/dao/LoginDao.phpError on line 49 in /Applications/MAMP/htdocs/latestcarapp/src/utility/Utility.php
+Message:Database Connection Error
+Function :Utility: dbConnection() 
+
+New Exception  Dated : 04/15/14 :16:44:59
+Exception : Error on line 61 in /Applications/MAMP/htdocs/carapp/src/dao/LoginDao.phpError on line 49 in /Applications/MAMP/htdocs/carapp/src/utility/Utility.php
+Message:Database Connection Error
+Function :Utility: dbConnection() 
+
+New Exception  Dated : 04/15/14 :16:47:03
+Exception : Error on line 61 in /Applications/MAMP/htdocs/carapp/src/dao/LoginDao.phpError on line 49 in /Applications/MAMP/htdocs/carapp/src/utility/Utility.php
+Message:Database Connection Error
+Function :Utility: dbConnection() 
+
+New Exception  Dated : 04/15/14 :16:47:32
+Exception : Error on line 61 in /Applications/MAMP/htdocs/carapp/src/dao/LoginDao.phpError on line 49 in /Applications/MAMP/htdocs/carapp/src/utility/Utility.php
+Message:Database Connection Error
+Function :Utility: dbConnection() 
+
+New Exception  Dated : 04/15/14 :16:50:15
+Exception : Error on line 61 in /Applications/MAMP/htdocs/carapp/src/dao/LoginDao.phpError on line 49 in /Applications/MAMP/htdocs/carapp/src/utility/Utility.php
+Message:Database Connection Error
+Function :Utility: dbConnection() 
